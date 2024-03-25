@@ -29,9 +29,10 @@ app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 //rutas
 app.get('/', (req, res) =>{
-    res.json({"mmessage":"Hola mundo"})
+    res.json({"message":"Hola mundo"})
 })
 //public
+app.use(express.static(join(__dirname, 'public')));
 
 //Server run
 
