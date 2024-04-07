@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 //rutas
 app.get('/', (req, res) =>{
-    res.json({"message":"Hola mundo"})
+    res.render('index')
 })
 //public
 app.use(express.static(join(__dirname, 'public')));
